@@ -1,0 +1,15 @@
+//============IMPORT_START============//
+@import './styling';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+//============IMPORT_END============//
+
+body{
+    width: 100vw;
+    margin: 0;
+    min-height: 100vh;
+    background-color: $smoky-black;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+}
