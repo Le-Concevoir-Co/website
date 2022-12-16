@@ -109,20 +109,26 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: #ffffff;
+    }
     .button{
-        width: 8.5rem;
-        height: 2.5rem;
+        width: 6.5rem;
+        height: 2rem;
         border-radius: 5rem;
         margin: -4rem auto;
         text-align: center;
-        color: #000000;
-        padding-top: 12px;        
+        padding: 5px;        
         background: whitesmoke;
         transition: .2s;
     }    
     .button:hover{
-        background: $smoky-black;
-        color: $gray90;
+        background: none;
+        transition: .2s;
     }
     
 }
@@ -136,37 +142,55 @@
 
 //------------OVERVIEW_START------------//
 .overview{
-    width: auto;
-    height: 20rem;
     border: solid 0.5px $black-olive;
-    display: flex;
+    place-items: center;
+    display: grid;
+    overflow: hidden;
+    .contents{
     justify-content: center;
     align-items: center;
-    .left-content{
-        width: 50rem;
-        height: 20rem;
-        background-color: aliceblue;
-        h1{
-            text-align: center;
-            margin-right: 15rem;
-            background: -webkit-linear-gradient(10deg, $midnight-blue, $frostbite);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    display: flex;        
+    box-shadow: 4px 4px 15px 2px rgba(black, 0.75);
+    transition: 0.5s
+    }
+    .contents{
+        .left-content{
+            width: 50rem;
+            height: 20rem;
+            background-color: aliceblue;
+            h1{
+                text-align: center;
+                margin-right: 15rem;
+                background: -webkit-linear-gradient(10deg, $midnight-blue, $frostbite);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            p{
+                text-align: left;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
         }
-        p{
-            text-align: left;
-            padding-right: 15px;
-            padding-left: 15px;
+        .right-content{
+            width: 50rem;
+            height: 25rem;
+            border-radius: 2rem;
+            background-color: aliceblue;
+            border: solid 1px $smoky-black;
+            margin-left: -50rem;
+            transition: .5s;
+        }
+        .right-content:hover{
+            margin-left: 0;
+            transition: .5s;
         }
     }
-    .right-content{
-        width: 45rem;
-        height: 25rem;
-        border-radius: 2rem;
-        background-color: aliceblue;
-        border: solid 1px $smoky-black;
+    .contents:hover{
+        .right-content{
+            margin-left: 0;
+        }
     }
-}
+    }
 //------------OVERVIEW_END------------//
 
 //------------TEAM_END------------//    
@@ -174,9 +198,26 @@
 .team {
     width: auto;
     height: 50rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    place-items: center;
+    display: grid;
+    overflow: hidden;
+    .cards{
+        display: flex;
+        .card{
+            background: white;
+            border-radius: 1rem;
+            padding: 4rem;
+            box-shadow: 4px 4px 15px 2px rgba(black, 0.75);
+            transition: 0.4s;
+            height: 10rem;
+            width: auto;
+        }
+        .card:not(:first-child){
+            margin-left: -12rem;
+        }
+        .card:hover ~ .card, .card:focus-within ~ .card{ transform: translateY(-1rem)}
+        .card:hover ~ .card, .card:focus-within ~ .card{ transform: translateX(11.5rem)}
+    }
   }
 //------------TEAM_START------------//
 

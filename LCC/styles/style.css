@@ -110,20 +110,26 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.main .left-content a {
+  text-decoration: none;
+  color: black;
+}
+.main .left-content a:hover {
+  color: #ffffff;
+}
 .main .left-content .button {
-  width: 8.5rem;
-  height: 2.5rem;
+  width: 6.5rem;
+  height: 2rem;
   border-radius: 5rem;
   margin: -4rem auto;
   text-align: center;
-  color: #000000;
-  padding-top: 12px;
+  padding: 5px;
   background: whitesmoke;
   transition: 0.2s;
 }
 .main .left-content .button:hover {
-  background: #0f0f0f;
-  color: #E5E5E5;
+  background: none;
+  transition: 0.2s;
 }
 
 .main .right-content {
@@ -134,44 +140,79 @@
 }
 
 .overview {
-  width: auto;
-  height: 20rem;
   border: solid 0.5px #3D3D3D;
-  display: flex;
+  place-items: center;
+  display: grid;
+  overflow: hidden;
+}
+.overview .contents {
   justify-content: center;
   align-items: center;
+  display: flex;
+  box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
 }
-.overview .left-content {
+.overview .contents .left-content {
   width: 50rem;
   height: 20rem;
   background-color: aliceblue;
 }
-.overview .left-content h1 {
+.overview .contents .left-content h1 {
   text-align: center;
   margin-right: 15rem;
   background: -webkit-linear-gradient(10deg, #000055, #da44a9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.overview .left-content p {
+.overview .contents .left-content p {
   text-align: left;
   padding-right: 15px;
   padding-left: 15px;
 }
-.overview .right-content {
-  width: 45rem;
+.overview .contents .right-content {
+  width: 50rem;
   height: 25rem;
   border-radius: 2rem;
   background-color: aliceblue;
   border: solid 1px #0f0f0f;
+  margin-left: -50rem;
+  transition: 0.5s;
+}
+.overview .contents .right-content:hover {
+  margin-left: 0;
+  transition: 0.5s;
+}
+.overview .contents:hover .right-content {
+  margin-left: 0;
 }
 
 .team {
   width: auto;
   height: 50rem;
+  place-items: center;
+  display: grid;
+  overflow: hidden;
+}
+.team .cards {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.team .cards .card {
+  background: white;
+  border-radius: 1rem;
+  padding: 4rem;
+  box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.75);
+  transition: 0.4s;
+  height: 10rem;
+  width: auto;
+}
+.team .cards .card:not(:first-child) {
+  margin-left: -12rem;
+}
+.team .cards .card:hover ~ .card, .team .cards .card:focus-within ~ .card {
+  transform: translateY(-1rem);
+}
+.team .cards .card:hover ~ .card, .team .cards .card:focus-within ~ .card {
+  transform: translateX(11.5rem);
 }
 
 .end_section {
