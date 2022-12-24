@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+body {
+  width: 100vw;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  scroll-behavior: smooth;
+}
+
+.indev .start-message {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.indev .start-message .container-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+}
+.indev .start-message .text {
+  color: whitesmoke;
+  margin-left: -35rem;
+  font-size: 24px;
+}
+.indev .start-message .loaders {
+  position: relative;
+  margin: 0 -25rem 5rem;
+  width: 10rem;
+  height: 10rem;
+}
+.indev .start-message .front {
+  position: absolute;
+  top: 104%;
+  left: 77.5%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  aspect-ratio: 1;
+  background-color: #00ffcc;
+  -webkit-clip-path: polygon(50% 88%, 0 0, 100% 0);
+  clip-path: polygon(50% 88%, 0 0, 100% 0);
+}
+.indev .start-message .front::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  z-index: 999;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  background-color: #9affff;
+  -webkit-clip-path: polygon(50% 90%, 0 0, 100% 0);
+  clip-path: polygon(50% 90%, 0 0, 100% 0);
+}
+.indev .start-message .loader {
+  position: relative;
+  margin: 0px auto;
+}
+.indev .start-message .loader1 {
+  position: absolute;
+  border-radius: 50%;
+  top: 25%;
+  left: 25%;
+}
+.indev .start-message .loader2 {
+  position: absolute;
+  top: 25.9%;
+  left: 26%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  -webkit-animation: rotate-left-right 10s infinite ease-in;
+  animation: leftload 0.5s infinite;
+  box-shadow: 0 0 20px 20px rgba(105, 241, 241, 0.2);
+  border: 1px solid black;
+  border-top-color: #00c79f;
+}
+.indev .start-message .loader::before {
+  content: "";
+  width: 245px;
+  height: 245px;
+  position: absolute;
+  border: 1px solid black;
+  border-top-color: #00c79f;
+  border-top: 5px;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: rightload 0.45s ease infinite;
+          animation: rightload 0.45s ease infinite;
+}
+.indev .start-message .loader1::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px dotted #69f1f1;
+  -webkit-animation: leftload 0.2s ease infinite;
+          animation: leftload 0.2s ease infinite;
+}
+@-webkit-keyframes rightload {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rightload {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes leftload {
+  from {
+    transform: rotate(1turn);
+  }
+  to {
+    transform: rotate(0turn);
+  }
+}
+@keyframes leftload {
+  from {
+    transform: rotate(1turn);
+  }
+  to {
+    transform: rotate(0turn);
+  }
+}/*# sourceMappingURL=indev.css.map */
